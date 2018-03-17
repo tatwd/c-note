@@ -5,7 +5,7 @@ int main ()
     int c;
     int nspace = 0, ntab = 0, nline = 0;
 
-    while ((c = getchar() != EOF))
+    while ((c = getchar()) != EOF)
     {
         if (c == ' ')
             ++ nspace;

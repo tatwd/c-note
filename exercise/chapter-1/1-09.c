@@ -2,25 +2,18 @@
 
 int main () 
 {
-    int c;
-    // int ctmp;
-
-    while ((c = getchar() != EOF))
+    int c, ctmp;
+    
+    c = getchar();
+    while (c != EOF)
     {
-        // ctmp = c;
-        // putchar(ctmp);
-        // c = getchar();
+        ctmp = getchar();
 
-        // if (c == ctmp && ctmp == ' ')
-        //     c = 0; // 空字符
-
+        if (c == ' ' && c == ctmp)
+            continue;
+            
         putchar(c);
-        
-        if (getchar() == c && getchar() == ' ')
-            c = 0;
-        else
-            c = getchar();
-
+        c = ctmp;
     }
     
     return 0;
