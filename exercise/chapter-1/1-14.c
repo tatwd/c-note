@@ -12,10 +12,8 @@ int main ()
     for (i = 0; i < N; ++ i)
         nc[i] = 0;
 
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
         ++ nc[c];
-    }
-
 
     for (i = 0; i < N; ++ i) {
         if (nc[i] != 0) {
