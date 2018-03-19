@@ -1,11 +1,11 @@
 # c-note
 
-This is my note of learning _K&R: The C Programming Language, Second Edition_. And in this repos, the source code in `example` dir is under `C89`, another in `exercise` dir is under the `C99`, which means i have to compile example code by run:
+This is my note of learning _K&R: The C Programming Language, Second Edition_. And in this repo, the source code in `example` dir is from the book and under **C89**, another in `exercise` dir is under the **C99**. So it means i have to compile the example code by running:
 
 ``` bash
-$ gcc main.c -srd=c89
+$ gcc main.c -std=c89
 ``` 
 
 and compile exerise code without parameters.
 
-In addition, i use the _MinGW/GCC_ to compile my code and _VSCode_ editor to edit my code.
+In addition, i use the _MinGW/GCC-6.3.0_ to compile my code and _VSCode-1.12.1_ editor to edit my code.
