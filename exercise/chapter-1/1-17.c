@@ -8,18 +8,19 @@ int append_line(char to[], char from[], int index);
 int main ()
 {
     int len;                // 当前行长度
-    int resultlen;             // result 的长度
+    int resultlen;          // result 的长度
+    int index;              // 数组下标
     char line[MAXLINE];     // 当前行
     char result[MAXLINE];   // 长度 >80 的所有行
 
     len = resultlen = 0;
     while ((len = get_line(line, MAXLINE)) > 0) {
         if (len > 80) {
-            append_line(result, line, resultlen);
-            resultlen  += len;
+            index = resultlen;
+            if ((resultlen += len) >= MAXLINE - 1) // 判断数组是否溢出
+                break;
+            append_line(result, line, index);
         }
-        if (resultlen >= MAXLINE - 1)
-            break;
     }
     if (resultlen > 0)
         printf("result:\n%s", result);
