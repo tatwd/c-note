@@ -7,17 +7,17 @@ int append_line(char to[], char from[], int index);
 
 int main ()
 {
-    int len;                // 当前行长度
-    int resultlen;          // result 的长度
-    int index;              // 数组下标
-    char line[MAXLINE];     // 当前行
-    char result[MAXLINE];   // 长度 >80 的所有行
+    int len;                /* 当前行长度 */
+    int resultlen;          /* result 的长度 */
+    int index;              /* 数组下标 */
+    char line[MAXLINE];     /* 当前行 */
+    char result[MAXLINE];   /* 长度 >80 的所有行 */
 
     len = resultlen = 0;
     while ((len = get_line(line, MAXLINE)) > 0) {
         if (len > 80) {
             index = resultlen;
-            if ((resultlen += len) >= MAXLINE - 1) // 判断数组是否溢出
+            if ((resultlen += len) >= MAXLINE - 1) /* 判断数组是否溢出 */
                 break;
             append_line(result, line, index);
         }
@@ -28,7 +28,7 @@ int main ()
     return 0;
 }
 
-// 获取当前行 line 并返回当前行的长度
+/* 获取当前行 line 并返回当前行的长度 */
 int get_line(char line[], int max)
 {
     int c, i;
@@ -44,7 +44,7 @@ int get_line(char line[], int max)
     return i;
 }
 
-// 从 to 的 index 处开始复制 form
+/* 从 to 的 index 处开始复制 form */
 int append_line(char to[], char from[], int index)
 {
     int i;

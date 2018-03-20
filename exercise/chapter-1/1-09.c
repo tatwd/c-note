@@ -2,22 +2,25 @@
 
 int main () 
 {
-    // int c, ctmp;
+    /*
+    int c, ctmp;
     
-    // c = getchar();
-    // while (c != EOF)
-    // {
-    //     ctmp = getchar();
+    c = getchar();
+    while (c != EOF)
+    {
+        ctmp = getchar();
 
-    //     if (c == ' ' && c == ctmp)
-    //         continue;
+        if (c == ' ' && c == ctmp)
+            continue;
             
-    //     putchar(c);
-    //     c = ctmp;
-    // }
+        putchar(c);
+        c = ctmp;
+    }
+    */
 
-    // 改进版
-
+    /*
+     * 改进版
+     */
     int c, ctmp;
     
     ctmp = 0;

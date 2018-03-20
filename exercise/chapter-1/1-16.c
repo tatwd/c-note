@@ -2,7 +2,7 @@
 
 #define MAXLINE 1000    /* 最大行数 */
 
-int get_line(char line[], int maxline); // stdio.h has already declared `getline`
+int get_line(char line[], int maxline); /* stdio.h has already declared `getline` */
 void copy(char to[], char from[]);
 
 int main ()

@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-#define IN  1    // 单词内
-#define OUT 0    // 单词外
-#define N   256  // 数组的长度
+#define IN  1    /* 单词内 */
+#define OUT 0    /* 单词外 */
+#define N   256  /* 数组的长度 */
 
 int main () 
 {

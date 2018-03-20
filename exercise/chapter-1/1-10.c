@@ -1,23 +1,24 @@
 #include <stdio.h>
-// #include <conio.h>
+/* #include <conio.h> */
 
 int main () 
 {
     int c;
 
-    while ((c = getchar()) != EOF) // getch()
+    while ((c = getchar()) != EOF) /* getch() */
     {
         if (c == '\t') {
-            // putchar('\\');
-            // putchar('t');
+            /* 
+            putchar('\\');
+            putchar('t'); 
+            */ 
             printf("\\t");
-        } else if (c == '\b') {
+        } else if (c == '\b')
             printf("\\b");
-        } else if (c == '\\') {
+        else if (c == '\\')
             printf("\\\\");
-        } else {
+        else
             putchar(c);
-        }
     }
     
     return 0;
