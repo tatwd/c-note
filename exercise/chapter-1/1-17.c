@@ -8,20 +8,20 @@ int append_line(char to[], char from[], int index);
 int main ()
 {
     int len;                // 当前行长度
-    int arrlen;             // result 的长度
+    int resultlen;             // result 的长度
     char line[MAXLINE];     // 当前行
     char result[MAXLINE];   // 长度 >80 的所有行
 
-    len = arrlen = 0;
+    len = resultlen = 0;
     while ((len = get_line(line, MAXLINE)) > 0) {
-        if (len > 80)
-            append_line(result, line, arrlen);
-        arrlen += len;
-        if (arrlen >= MAXLINE - 1)
+        if (len > 80) {
+            append_line(result, line, resultlen);
+            resultlen  += len;
+        }
+        if (resultlen >= MAXLINE - 1)
             break;
     }
-    
-    if (arrlen > 0)
+    if (resultlen > 0)
         printf("result:\n%s", result);
 
     return 0;
