@@ -45,16 +45,12 @@ void reverse(char s[])
     int i, len;
     char reve[N];
 
-    /**
-     * copy `s` to `reve` and get length of `s`
-     */
+    /* copy `s` to `reve` and get length of `s` */
     i = len = 0;
     while ((reve[len] = s[len]) != '\0')
         ++len;
     
-    /** 
-     * reverse 
-     */
+    /* reverse */
     while (i < len) {
         s[i] = reve[len - i - 1];
         ++i;
