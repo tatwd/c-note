@@ -59,8 +59,16 @@ void calc_tlimit()
 {
     /*
      * 利用位运算
-     * ~0 得到全 1 的数 右移（>>）一位得到最大值
+     * ~0 得到全 1 的数
+     * 无符号时表示最大数，有符号时右移（>>）一位得到最大值
      * 最大值的相反数 - 1 得到最小值
+     * e.g. 
+     *      ~0 => 11111111 11111111
+     *         => signed: -1
+     *         => unsigned: 2^16 -1
+     * then: >> 1 and - 1 
+     *         => - 01111111 11111111 - 00000000 00000001
+     *         => 
      */
 
     printf("====Calc Type's limits====\n");
@@ -69,8 +77,8 @@ void calc_tlimit()
     printf(
         "signed char: %d ~ %d\n"
         "unsigned char: %u ~ %u\n", 
-        -(char)((unsigned char)~0 >> 1) - 1, 
-        (char)((unsigned char)~0 >> 1),
+        -((unsigned char)~0 >> 1) - 1, 
+        ((unsigned char)~0 >> 1),
         0, (unsigned char)~0
     );
 
@@ -78,8 +86,8 @@ void calc_tlimit()
     printf(
         "signed short: %d ~ %d\n"
         "unsigned short: %u ~ %u\n", 
-        -(short)((unsigned short)~0 >> 1) - 1, 
-        (short)((unsigned short)~0 >> 1),
+        -((unsigned short)~0 >> 1) - 1, 
+        ((unsigned short)~0 >> 1),
         0, (unsigned short)~0
     );
 
@@ -87,17 +95,15 @@ void calc_tlimit()
     printf(
         "signed int: %d ~ %d\n"
         "unsigned int: %u ~ %u\n", 
-        -(int)((unsigned int)~0 >> 1) - 1, 
-        (int)((unsigned int)~0 >> 1),
-        0, (unsigned int)~0
+        -(~0U >> 1) - 1, ~0U >> 1,
+        0, ~0U
     );
 
     // long
     printf(
-        "signed long: %d ~ %d\n"
+        "signed long: %d ~ %u\n"
         "unsigned long: %u ~ %u\n", 
-        -(long)((unsigned long)~0 >> 1) - 1, 
-        (long)((unsigned long)~0 >> 1),
-        0, (unsigned long)~0
+        -(~0UL >> 1) - 1, ~0UL >> 1,
+        0, ~0UL
     );
 }
