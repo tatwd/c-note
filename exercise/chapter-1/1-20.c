@@ -57,7 +57,7 @@ void detab(char s[])
         if (cp[i] == '\t' && pos != 0) {
             n = N - pos;
             while (j - i < n)
-                s[j++] = '*'; /* add space */
+                s[j++] = ' '; /* add space */
         } else {
             s[j] = cp[i];
             ++j;
