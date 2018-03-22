@@ -22,4 +22,6 @@ int lower(int c)
         return c + 'a' - 'A';  /* or c + 32 */
     else 
         return c;
+    
+    /* return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c; */
 }
