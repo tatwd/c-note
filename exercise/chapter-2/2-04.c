@@ -13,6 +13,10 @@ int main()
     return 0;
 }
 
+/*
+ * remove s1 chars which are in s2
+ * i.e. s1 = "helloword", s2 = "eo" => s1 = "hllwrld"
+ */
 void squeeze(char s1[], char s2[])
 {
     int i, j, k, flg;
