@@ -5,30 +5,35 @@ unsigned setbits(unsigned x, int p, int n, unsigned y);
 int main()
 {
     unsigned int x, y;
-    // printf("%d %d", (a >> 2 << 2) | a, (a >> 2) & (~0 << 1));
-    x = 7;
-    y = 10;
+    int p, n;
 
-    x = setbits(x, 2, 3, y);
-    printf("x=%d\n", x);
+    x = 16;
+    y = 10;
+    p = 2;
+    n = 3;
+
+    x = setbits(x, p, n, y);
+    printf("%d\n", x);
 
     return 0;
 }
 
 /*
- * i.e.  x = 16, p = 2, n = 3, y = 10
- *       0001 0000    0000 1010
- *       000x xx00    0000 1xxx 
- *    => 0000 1000     
+ * 此函数将二进制位最右边的第一位看作第 0 位
  */
 unsigned setbits(unsigned x, int p, int n, unsigned y)
 {
-    /* 最右边的一位是第 0 位 */
-    unsigned int tmp = x;
-    y = y | (~0 << n); /* 第 n 位的值移到最右边 */
-    x = x >> p;
-
-    printf("%d\n", 0 | tmp);
-
-    return ((x & y) << p) | tmp;
+    /*i.e.
+     * x = 7, p = 2, n = 3, y = 10
+     * 
+     * => x = 0000 0111     y = 0000 1010
+     * => x & (~0 << (n+p))     => 0000 0000
+     * => (y & ~(~0 << n)) << p => 0000 1000
+     * => x & ~(~0 << p)        => 0000 0011
+     * => 0000 1011
+     * 
+     * so returns 11
+     *  
+     */
+    return (x & (~0 << (n+p))) | ((y & ~(~0 << n)) << p) | (x & ~(~0 << p));
 }
