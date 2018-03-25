@@ -23,5 +23,5 @@ int main()
 unsigned invert(unsigned x, int p, int n)
 {
     // return ((x >> p & ~0 << n) | ~((x >> p) | (~0 << n))) << p | (x & ~(~0 << p));
-    return (x & ~0 << (n+p)) & ~(x & ~(~0 << (n+p))) | (x & ~(~0 << p));    
+    return (x & ~0 << (n+p)) & ~(x & ~(~0 << (n+p))) | (x & ~(~0 << p));
 }

@@ -1,5 +1,5 @@
-/* 
- * atoi 函数：将字符串 s 转化为对应的整型数 
+/*
+ * atoi 函数：将字符串 s 转化为对应的整型数
  * e.g. "12345" => 12345
  */
 int atoi(char s[])
@@ -20,8 +20,8 @@ int lower(int c)
 {
     if (c >= 'A' && c <= 'Z')
         return c + 'a' - 'A';  /* or c + 32 */
-    else 
+    else
         return c;
-    
+
     /* return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c; */
 }

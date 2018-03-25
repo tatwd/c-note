@@ -17,14 +17,14 @@ int main()
     return 0;
 }
 
-/* 
- * string to lower and get its length 
+/*
+ * string to lower and get its length
  */
 int lower(char s[])
 {
     int i;
     for (i = 0; s[i] != '\0'; ++i)
-        s[i] = (s[i] >= 'A' && s[i] <= 'Z') 
+        s[i] = (s[i] >= 'A' && s[i] <= 'Z')
             ? s[i] + 'a' - 'A'
             : s[i];
     return i;

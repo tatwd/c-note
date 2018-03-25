@@ -5,7 +5,7 @@
 int get_line(char s[], int max);
 void reverse(char s[]);
 
-int main() 
+int main()
 {
     int c;
     char s[N];
@@ -35,12 +35,11 @@ int get_line(char s[], int max)
     return i;
 }
 
-
 /**
  * 将字符串 s 的字符顺序颠倒
  * e.g. "hello\n\0" => "\nolleh\0"
  */
-void reverse(char s[]) 
+void reverse(char s[])
 {
     int i, len;
     char reve[N];
@@ -49,7 +48,7 @@ void reverse(char s[])
     i = len = 0;
     while ((reve[len] = s[len]) != '\0')
         ++len;
-    
+
     /* reverse */
     while (i < len) {
         s[i] = reve[len - i - 1];

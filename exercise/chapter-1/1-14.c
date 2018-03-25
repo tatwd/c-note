@@ -4,11 +4,11 @@
 #define OUT 0    /* 单词外 */
 #define N   256  /* 数组的长度 */
 
-int main () 
+int main ()
 {
     int c, i;
     int nc[N];
-    
+
     for (i = 0; i < N; ++ i)
         nc[i] = 0;
 

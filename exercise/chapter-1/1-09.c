@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int main () 
+int main ()
 {
     /*
     int c, ctmp;
-    
+
     c = getchar();
     while (c != EOF)
     {
@@ -12,7 +12,7 @@ int main ()
 
         if (c == ' ' && c == ctmp)
             continue;
-            
+
         putchar(c);
         c = ctmp;
     }
@@ -22,17 +22,17 @@ int main ()
      * 改进版
      */
     int c, ctmp;
-    
+
     ctmp = 0;
     while ((c = getchar()) != EOF)
     {
         if (c == ' ' && c == ctmp)
             continue;
-            
+
         putchar(c);
         ctmp = c;
     }
 
-    
+
     return 0;
 }

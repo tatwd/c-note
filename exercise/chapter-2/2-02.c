@@ -6,7 +6,7 @@ int main()
 {
     int c, i, lim;
     char s[MAX];
-    
+
     lim = MAX;
     /* for (i=0; i<=lim-1 && (c=getchar()) != '\n' && c != EOF; ++i) */
     for (i=0; (i<=lim-1) + ((c=getchar()) != '\n') + (c != EOF) == 3; ++i)

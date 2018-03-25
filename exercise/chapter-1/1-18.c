@@ -6,7 +6,7 @@ int main()
 {
     int c, i, n, nline;
     char s[N];
-    
+
     n = nline = 0;
     for (i = 0; i < N - 1 && (c = getchar()) != EOF; ++i) {
         if (c == '\t' || c == ' ') {

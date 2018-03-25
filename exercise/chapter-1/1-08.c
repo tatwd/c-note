@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () 
+int main ()
 {
     int c;
     int nspace = 0, ntab = 0, nline = 0;
@@ -9,10 +9,10 @@ int main ()
     {
         if (c == ' ')
             ++ nspace;
-        
+
         if (c == '\t')
             ++ ntab;
-        
+
         if (c == '\n')
             ++ nline;
     }
