@@ -23,7 +23,7 @@ int binsearch(int x, int v[], int n)
     mid = (n - 1) / 2;
     low = x > v[mid] ? mid + 1 : 0;
     high = x < v[mid] ? mid -1 : n - 1;
-    
+
     /* 循环内部只执行了一次测试 */
     while (low < high) {
         if (x < v[mid])
