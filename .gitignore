@@ -3,3 +3,6 @@
 
 # .vscode dir
 .vscode/*
+
+# tests dir
+tests/*
